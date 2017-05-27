@@ -12,12 +12,12 @@ System.out.println("	   _( ^) ");
 System.out.println(" 	    >~<");
 		
 		
-		writeLine("My pet monkey's name is " + jax.name);
-		System.out.println("Jax is currently feeling on a scale of 1-50:\nhunger = " + jax.getHunger() + "\nthirst = "
+		writeLine("My pet monkey's name is " + jax.name + ".");
+		System.out.println("Jax is currently feeling on a scale of 1-100:\nhunger = " + jax.getHunger() + "\nthirst = "
 				+ jax.getThirst() + "\nenergy = " + jax.getEnergy());
 
 		do{
-		System.out.println("What would you like to do: feed, water, or put Jax to bed?");
+		writeLine("What would you like to do: feed, water, or put Jax to bed?");
 		String state = input.next();
 		switch (state.toLowerCase()) {
 		case "feed":
@@ -30,23 +30,33 @@ System.out.println(" 	    >~<");
 			jax.bed();
 			break;
 		case "quit":
-			System.out.println("Don't be a quitter! Think of Jax and how she feels.");
+			writeLine("Don't be a quitter! Think of Jax and how she feels.");
 				System.exit(0);
 				break;
 				default:
-					System.out.println("This is not a valid entry.");
+					writeLine("This is not a valid entry.");
 		continue;
 		}
-		System.out.println("Jax is currently feeling: \nhunger =  " + jax.getHunger() + "\nthirst = "
+		writeLine("Jax is currently feeling: \nhunger =  " + jax.getHunger() + "\nthirst = "
 				+ jax.getThirst() + "\nenergy = " + jax.getEnergy());
 		jax.tick();
 			
-		System.out.println("Three hours later, Jax is currently feeling: \nhunger  " + jax.getHunger() + "\nthirst = "
+		writeLine("Three hours later, Jax is currently feeling: \nhunger  " + jax.getHunger() + "\nthirst = "
 				+ jax.getThirst() + "\nenergy = " + jax.getEnergy());
+		if (jax.isHungry()){
+				jax.stealBanana();
+		writeLine("Jax stole a banana. His hunger = " + jax.getHunger() + "." + " Now he's happily hooting!");}
+		if (jax.isThirsty()){
+			writeLine("Jax was so thirsty, he drank out of the toilet. His thirst = " + jax.getThirst() + ".");
 		}
+		
+		}
+		
+		
+		
 		while(jax.getEnergy()>0);
 		if (jax.getEnergy()<=0){
-			System.out.println("Sorry, Jax is no longer with us. You'll need to dig a hole in the backyard.");
+		System.out.println("Sorry, Jax is no longer with us. You'll need to dig a hole in the backyard.");
 			
 			}
 		}

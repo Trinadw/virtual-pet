@@ -12,13 +12,13 @@ int getHunger(){
 }
 
 boolean isHungry(){
-	return hunger>=5;
+	return hunger>=45;
 	}
 int getThirst(){
 	return thirst;
 }
 boolean isThirsty(){
-	return thirst>=4;
+	return thirst>=38;
 }
 	int getEnergy(){
 		return energy;
@@ -45,6 +45,14 @@ boolean isThirsty(){
 		thirst = thirst + 13;
 		energy = energy -14;
 				
+	}
+	void stealBanana() {
+		hunger = hunger -3;
+	energy = energy -7;
+		}
+	void toiletDrinker(){
+		thirst = thirst - 2;
+		energy = energy -4;
 	}
 	
 }
