@@ -6,10 +6,10 @@ public class VirtualPetApp {
 		VirtualPet jax = new VirtualPet();
 		jax.name = "Jax";
 	
-System.out.println("	    *~*");
-System.out.println("	   @ oo @");
-System.out.println("	   _( ^) ");
-System.out.println(" 	    >~<");
+writeLine("	    *~*");
+writeLine("	   @ oo @");
+writeLine("	   _( ^) ");
+writeLine("     >~<");
 		
 		
 		writeLine("My pet monkey's name is " + jax.name + ".");
