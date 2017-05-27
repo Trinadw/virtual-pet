@@ -1,11 +1,9 @@
 
 public class VirtualPet {
 	String name;
-	int hunger = 7;
-	int thirst = 4;
-	int energy = 9;
-
-	
+	int hunger = 37;
+	int thirst = 34;
+	int energy = 49;
 	
 	
 
@@ -14,7 +12,7 @@ int getHunger(){
 }
 
 boolean isHungry(){
-	return hunger>=7;
+	return hunger>=5;
 	}
 int getThirst(){
 	return thirst;
@@ -29,22 +27,23 @@ boolean isThirsty(){
 		return energy<=7;
 			}
 	void feed(){
-	hunger = hunger-2;
-	thirst = thirst +1;
-	energy = energy -3;
+	hunger = hunger-10;
+	thirst = thirst +10;
+	energy = energy -8;
 			}
 	void water(){
-		thirst = thirst-1;
-		energy = energy -1;
+		thirst = thirst-10;
+		energy = energy -7;
 	}
 	void bed(){
-		energy = energy +3;
-		hunger = hunger +3;
+		energy = energy +10;
+		hunger = hunger +10;
+		thirst = thirst +10;
 	}
 	void tick(){
-		hunger = hunger + 2;
-		thirst = thirst + 3;
-		energy = energy -4;
+		hunger = hunger + 12;
+		thirst = thirst + 13;
+		energy = energy -14;
 				
 	}
 	
