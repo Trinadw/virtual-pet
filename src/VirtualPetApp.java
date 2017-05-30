@@ -9,7 +9,7 @@ public class VirtualPetApp {
 		writeLine("	    *~*");
 		writeLine("	   @ oo @");
 		writeLine("	   _( ^) ");
-		writeLine("     >~<");
+		writeLine("            >~<");
 
 		writeLine("My pet monkey's name is " + jax.name + ".");
 		System.out.println("Jax is currently feeling on a scale of 1-100:\nhunger = " + jax.getHunger() + "\nthirst = "

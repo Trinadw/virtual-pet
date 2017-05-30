@@ -1,2 +1,26 @@
-Readme Pet App for Virtual
-Description for my Virtual Pet app.
+#Virtual Pet - Jax
+This app introduces my virtual pet monkey Jax. The user is provided with the hunger level of 37, thirst level 34 and energy level of 49.
+ The app will ask the user if they want to feed, water or put Jax to bed based on their preference. If the user feeds Jax, her hunger level will decrease by 10, her thirst will increase by 10 and her energy will decrease by 8. 
+ When the user opts to water Jax, her thirst will decrease by 10 and her energy will decrease by 7. 
+ When the user decides to put Jax to bed her energy level will increase by 10, her hunger and thirst will also increase by 10.
+ If Jax's hunger level is 45 or above, she will steal a banana to satisfy her hunger. This will cause her hunger level to decrease by 3.
+ If Jax's thirst level reaches 38 or above, she will drink from the toilet. This will decrease her thirst by 2.
+ If Jax's energy is 30 or below she will act out, decreasing her energy by 5.
+ At the end of each round of the game there is a tick that will randomly increase the hunger and thirst levels, while decreasing the energy level.
+ The user is able to exit the game by inputting "quit".
+ 
+ 
+ The class hold the methods for the game.
+ The hunger, thirst and energy levels are initialized at the beginning.
+ The int's getHunger, getThirst and getEnergy hold the levels for each respectively.
+ The booleans isHungry, isThirsty and isTired are used to prompt Jax to satisfy her needs.
+ The voids feed, water and bed are used to increase/decrease Jax's care levels based on the user input.
+ The tick void will impact the care levels at the end of each round.
+ The stealBanana, toiletDrinker and actOut voids will increase/decrease based on the action Jax takes to satisfy her needs.
+ 
+ The App provides the code to print a visual of Jax the monkey using writeLine, a method to allow the printing of characters.
+ A switch/case is used to provide the options to the user for taking care of Jax, as well as an option to quit. There is also a default option if the user types in anything other than the provided entries which will advise them that their entry is invalid.
+ Based on the user input a new accounting is provided for Jax's care levels.
+ The tick will run, yet again providing new care levels.
+ The self care methods will run if Jax's care levels reach a desired point.
+ Jax will terminate when any of her care levels reach 0, ending the game.
